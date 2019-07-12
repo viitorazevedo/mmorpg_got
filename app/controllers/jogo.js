@@ -41,6 +41,15 @@ module.exports.suditos = function(application, req, res){
         res.send('Usuário precisa fazer login');
     return;
     }
+
+/* recuperar as ações inseridas no BD */
+var connection = application.config.dbConnection;
+var JogoDAO = new application.app.models.JogoDAO(connection);
+
+var usuario = req.session.usuario;
+
+JogoDAO.getAcoes(usuario);
+
     res.render("pergaminhos", { validacao: {} });
 }
 

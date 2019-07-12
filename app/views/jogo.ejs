@@ -57,13 +57,13 @@
 
 	    <div class="container">
 			
-			<% if(comando_invalido == 'A') {%>
+			<% if(msg == 'A') {%>
 				<div class="alert alert-danger" id="msg">
 					<strong>Operação inválida, verifique se todos os campos foram informados</strong>
 				</div>
 				<% } %>
 
-				<% if(comando_invalido == 'B') {%>
+				<% if(msg == 'B') {%>
 					<div class="alert alert-info" id="msg">
 						<strong>Ação realizada com Sucesso!</strong>
 					</div>
